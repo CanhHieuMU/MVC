@@ -4,10 +4,10 @@ using BOOKWEB.Models;
 
 namespace BOOKWEB.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class BookDbContext : DbContext
     {
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
         {
 
         }

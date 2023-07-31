@@ -1,7 +1,12 @@
+using BOOKWEB.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<BookDbContext>
+    (options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaulConnection")));
 
 var app = builder.Build();
 
