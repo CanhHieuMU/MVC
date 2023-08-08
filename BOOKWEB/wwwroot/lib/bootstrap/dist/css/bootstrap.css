@@ -6670,7 +6670,7 @@ textarea.form-control-lg {
 }
 
 .d-flex {
-  display: flex !important;
+  display: contents !important;
 }
 
 .d-inline-flex {

@@ -1,0 +1,36 @@
+﻿@model Account
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form method="post">
+        <div class="container">
+            <div class="container1">
+                <div class="notiforcation">
+                    <label style="color:red">@ViewBag.Noti</label>
+                </div>
+            <div class="display-4">
+                <h1 class="text-center">Login</h1>
+            </div>
+            <label for="usernames"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="usernames" required>
+
+                <label for="passwords"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="passwords" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+            <button type="submit">Login</button>
+                </a>
+        </div>
+        </div>
+        <div class="container text-center" style="background-color:#f1f1f1">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</body>
+</html>
