@@ -25,14 +25,7 @@ namespace BOOKWEB.Controllers
 
             _account = bookDbContext.Accounts.Where
                 (a => a.Usernames == obj.Usernames && a.Passwords == obj.Passwords).FirstOrDefault();
-
-            //
             
-            foreach (var a in bookDbContext.Accounts)
-            {
-                
-            }
-
             if (_account == null)
             {
                 ViewBag.Noti = "Dang nhap khong thanh cong";
@@ -40,7 +33,6 @@ namespace BOOKWEB.Controllers
             }
             else {
                 //add session
-                Session[_account] = account;
 
                 return RedirectToAction("Index", "Home", account);
             }
