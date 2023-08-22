@@ -3,6 +3,7 @@ using Azure.Messaging;
 using BOOKWEB.Data;
 using BOOKWEB.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Session;
 
 namespace BOOKWEB.Controllers
 {
@@ -33,7 +34,7 @@ namespace BOOKWEB.Controllers
             }
             else {
                 //add session
-
+                
                 return RedirectToAction("Index", "Home", account);
             }
         }
