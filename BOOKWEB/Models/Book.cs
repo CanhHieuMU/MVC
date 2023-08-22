@@ -18,6 +18,7 @@ namespace BOOKWEB.Models
         public string Author { get; set; }
         public DateTime DatePublic { get; set; }
         public string ImageUrl { get; set; }
+        public string PDFUrl { get; set; }
         public virtual ICollection<CategoryBook> CategoryBooks { get; set; }
         public virtual ICollection<Repository> Repositories { get; set; }
     }
