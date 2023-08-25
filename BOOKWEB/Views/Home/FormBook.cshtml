@@ -21,12 +21,14 @@
                 </div>
                 <div class="row">
                     <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
-                        <img src="@Model.ImageUrl" width="100%" class="rounded" />
+                        <img src="~/@Model.ImageUrl" width="100%" class="rounded" />
                     </div>
                     <div class="col-12 col-lg-6 offset-lg-1">
 
-                        <div class="col-12 col-md-6 pb-4">
-                            <span class="badge">@Model.InformationBook</span>
+                        <div class="text-container">
+                        <div class="col-12 col-md-12 pb-4" >
+                            <span class="text-dark">@Model.InformationBook</span>
+                        </div>
                         </div>
                         <div class="row ps-2">
                         <h5 class="text-dark text-opacity-50 ">Discription : </h5>
@@ -38,7 +40,9 @@
                         <div class="row ps-2">
                             <h6 class="text-dark text-opacity-50 ">DatePublic : @Model.DatePublic</h6>
                         </div>
-                       
+                        <a asp-controller="Book" asp-action="Read" asp-route-bookID="@Model.BookId">
+                        <button>Đọc</button>
+                        </a>
                     </div>
 
                 </div>

@@ -20,19 +20,19 @@ namespace BOOKWEB.Controllers
             
             return View(b);
         }
-        
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        public IActionResult FormBook(int bookID) 
+        public IActionResult FormBook(int bookID)
         {
             Book book = bookDbContext.Books.FirstOrDefault(b => b.BookId == bookID);
             var listCategories = bookDbContext.Books.Where(boo => boo.BookId == bookID).SelectMany(b => b.CategoryBooks).ToList();
             book.CategoryBooks = listCategories;
-            
+
             return View(book);
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

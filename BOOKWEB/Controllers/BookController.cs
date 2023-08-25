@@ -10,9 +10,11 @@ namespace BOOKWEB.Controllers
         public BookController(Data.BookDbContext bookDbContext) {
             this.bookDbContext = bookDbContext;
         }
-        [HttpPost]
-        public IActionResult FormBook(Book book)
+
+        public IActionResult Read(int bookID)
         {
+            Book book = bookDbContext.Books.FirstOrDefault(b => b.BookId == bookID);
+
             return View(book);
         }
     }

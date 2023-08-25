@@ -21,6 +21,17 @@ body {
     margin-bottom: 60px;
 
 }
+.book-container a{
+    text-decoration : none;
+}
+
+.text-container {
+    padding: 1rem;
+    max-height: 320px;
+    overflow-y: auto;
+    
+}
+
 
 /*Login css*/
 
